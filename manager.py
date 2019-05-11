@@ -6,8 +6,14 @@ manager.add_command("server", Server())
 
 @manager.shell
 def make_shell_context():
-	return dict(app=app, db=db, HashedMessage=HashedMessage)
+    return dict(app=app, db=db, HashedMessage=HashedMessage)
+
+@manager.command
+def setup_db():
+    db.create_all()
+    db.session.commit()
+
 
 if __name__ == "__main__":
-	manager.run()
+    manager.run()
 
