@@ -2,7 +2,7 @@ from flask.ext.script import Manager, Server
 from main import app, db, HashedMessage
 
 manager = Manager(app)
-manager.add_command("server", Server())
+manager.add_command("server", Server(host='0.0.0.0', port=5000))
 
 @manager.shell
 def make_shell_context():
