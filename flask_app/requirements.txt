@@ -13,7 +13,7 @@ binarytree==4.0.0
 blessed==1.14.1
 blinker==1.4
 botocore==1.12.86
-certifi==2016.9.26
+certifi==2022.12.7
 cffi==1.10.0
 click==6.7
 colorama==0.3.9
